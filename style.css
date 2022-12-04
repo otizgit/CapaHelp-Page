@@ -1046,6 +1046,17 @@ form {
     margin-bottom: clamp(40px, 1vw, 70px);
 }
 
+/* ? CHANGE PASSWORD RESPONSIVENESS: */
+
+@media (max-width: 590px) {
+    .password-toggles {
+        justify-content: space-between;
+    }
+    .password-toggles div {
+        flex-basis: 49%;
+    }
+}
+
 
 /* * LOGIN PAGE: */
 .login-header {
