@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CapaHelp- Home</title>
+    <title>CapaHelp- Create Ticket</title>
     <link rel="icon" sizes="32x32" type="jpg/png" href="./images/CapacityBay-Logo1.png">
     <link rel="stylesheet" href="style.css">
     <script defer src="https://kit.fontawesome.com/96a70be8ea.js" crossorigin="anonymous"></script>
     <script defer src="./app.js"></script>
 </head>
 <body>
-    <main>
-        <header>
+    <main class="ticket-main create-main">
+        <header class="solution-header">
             <div class="logo">
                 <a href="./index.html">
                     <img src="./images/CapacityBay-Logo1.png" alt="CapacityBay-Logo1">
@@ -21,9 +21,9 @@
             <nav>
                 <div class="main-navigation">
                     <ul>
-                        <li><a class="active-nav" href="./index.html">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="./solutions.html">Solutions</a></li>
-                        <li><a href="./tickets.html">Tickets</a></li>
+                        <li><a class="active-nav" href="./tickets.html">Tickets</a></li>
                     </ul>
                 </div>
                 <div class="details">
@@ -49,31 +49,47 @@
                 <div class="ham"></div>
             </div>
         </header>
-        <div class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Welcome to<br><span>CapaHelp</span>
-                </h1>
-                <p class="sub">
-                    At CapacityBay, Inc. we support you with you with our great services    and our core values: Hard work, Punctuality, Respect, Cooperation and collaboration, Partnership, Diversity, Tolerance, Teamwork, Research, Equity.
-                </p>
-                <p class="sub">
-                    Tell us what you want, we build you a solution, create a Ticket and Track Our Progress
-                </p>
-                <div class="hero-toggles">
-                    <div class="create">
-                        <a href="./create.html">Create a Ticket</a>
-                    </div>
+        <div class="hero solution-hero ticket-hero">
+            <p class="solutions-top ticket-top">
+                <span><a href="./index.html">Home</a></span> > <a href="./create.html">Create a Ticket</a>
+            </p>
+            <h1 class="hero-title create-title">Create a Ticket</h1>
+            <form>
+                <div class="form-box">
+                    <label for="email">Customer email <span>*</span></label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-box">
+                    <label for="title">Title <span>*</span></label>
+                    <input type="text" id="title">
+                </div>
+                <div class="form-box">
+                    <label for="priority">Priority</label>
+                    <select name="priority" id="priority">
+                        <option value="normal">Normal</option>  
+                        <option value="low">Low</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-box">
+                    <label for="description">Description <span>*</span></label>
+                    <textarea id="description" rows="5"></textarea>
+                </div>
+                <div class="form-box file-box">
+                    <label class="file-label" for="file">Attach a file</label>
+                    <p>(File size < 35mb)</p>
+                    <input type="file" id="file" class="file">
+                </div>
+                <div class="hero-toggles create-toggles">
                     <div class="view">
-                        <a href="./solutions.html">View Solutions</a>
+                        Cancel
+                    </div>
+                    <div class="create">
+                        <a>Submit</a>
                     </div>
                 </div>
-            </div>
-            <div class="hero-img">
-                <img src="./images/undraw_work_time_re_hdyv.svg" alt="undraw_work_time_re_hdyv">
-            </div>
+            </form>
         </div>
-        <div class="login-link"><a href="./login.html">Go to Login/Register Page <span><i class="fa-solid fa-arrow-right"></i></span></a></div>
     </main>
 </body>
 </html>

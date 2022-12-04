@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapaHelp- Login/Register</title>
+    <link rel="icon" sizes="32x32" type="jpg/png" href="./images/CapacityBay-Logo1.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://kit.fontawesome.com/96a70be8ea.js" crossorigin="anonymous"></script>
+    <script defer src="./login.js"></script>
+</head>
+<body>
+    <main class="login-main">
+        <header class="login-header">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/CapacityBay-Logo1.png" alt="CapacityBay-Logo1">
+                </a>
+            </div>
+            <nav class="log-nav">
+                <div class="hero-toggles login-toggles">
+                    <div class="view login">
+                        Login
+                    </div>
+                    <div class="create register">
+                        Register
+                    </div>
+                </div>
+            </nav>
+            <div class="hamburger log-ham">
+                <div class="ham"></div>
+                <div class="ham"></div>
+                <div class="ham"></div>
+            </div>
+        </header>
+        <div class="hero login-hero">
+            <div class="hero-img login-img">
+                <img src="./images/undraw_team_spirit_re_yl1v.svg" alt="undraw_work_time_re_hdyv">
+                <div class="capa">
+                    <img src="./images/CapacityBay-Logo1.png" alt="CapacityBay-Logo1">
+                </div>
+            </div>
+            <div class="hero-content login-content">
+                <h1 class="hero-title login-text-top">
+                    Need Support?
+                </h1>
+                <h1 class="hero-title yellow-text">
+                    WE'VE GOT YOU<br><span>COVERED</span>
+                </h1>
+                <p class="sub">
+                    At CapacityBay, Inc. we support you with you with our great services    and our core values: Hard work, Punctuality, Respect, Cooperation and collaboration, Partnership, Diversity, Tolerance, Teamwork, Research, Equity.
+                </p>
+                <p class="sub">
+                    Tell us what you want, we build you a solution, create a Ticket and Track Our Progress
+                </p>
+                <div class="hero-toggles login-hero-toggle">
+                    <div class="create">
+                        <a href="./create.html">Create a Ticket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-link login-main-link"><a href="./index.html">Back to Home Page <span><i class="fa-solid fa-arrow-left-long"></i></span></a></div>
+        <div class="register-modal">
+            <div class="modal-header register-header">
+                <h1>REGISTER</h1>
+            </div>
+            <form class="login-form">
+                <div class="login-box login-box2">
+                    <input type="name" placeholder="First Name">
+                    <input type="name" placeholder="Last Name">
+                </div>
+                <div class="login-box">
+                    <input type="text" placeholder="Email Address">
+                </div>
+                <div class="login-box">
+                    <input type="number" placeholder="Phone Number">
+                </div>
+                <div class="login-box">
+                    <input type="password" placeholder="Choose a password">
+                </div>
+                <div class="login-box">
+                    <select name="country" id="country">
+                        <option value="Country">Country</option>
+                    </select>
+                </div>
+                <div class="lower-form-box">
+                    <div class="remember register-terms">
+                        <input type="checkbox" id="sign-check">
+                        <label for="sign-check">By signing up, I accept CapacityBay's <span>Terms of service</span> and <span>Privacy Notice</span></label>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="login-modal">
+            <div class="modal-header">
+                <h1>LOGIN</h1>
+            </div>
+            <form class="login-form">
+                <div class="login-box">
+                    <input type="text" placeholder="Email Address">
+                </div>
+                <div class="login-box">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="lower-form-box">
+                    <div class="remember">
+                        <input type="checkbox" id="check">
+                        <label for="check">Remember me</label>
+                    </div>
+                    <div class="forgot-box">
+                        <h3>Forgotten Password?</h2>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="overlay"></div>
+    </main>
+</body>
+</html>
