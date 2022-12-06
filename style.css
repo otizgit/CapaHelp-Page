@@ -21,6 +21,8 @@
     --yellow: rgb(250,234,157);
     --lightGreen: rgb(209,239,204);
     --pink: rgb(246,209,208);
+    --Green: rgb(80,168,108);
+    --Red: hsl(0, 89%, 48%);
 
     /* ?Text Clamp */
     --clamp: clamp(15px, 1vw, 30px);
@@ -300,23 +302,26 @@ nav ul li a:hover {
     animation: slideUp .5s ease forwards .8s;
 }
 
-.login-link {
-    margin-top: clamp(50px, 1vw, 100px);
+.links-container {
+    display: flex;
     width: 80%;
     margin-inline: auto;
+    gap: clamp(25px, 2vw, 50px);
     opacity: 0;
     animation: slideUp .5s ease forwards .9s;
+    margin-top: clamp(50px, 1vw, 100px);
 }
-.login-link a {
+
+.link a {
     font-size: var(--clamp);
     font-weight: 500;
     color: var(--maincolor);
 }
-.login-link a:hover {
+.link a:hover {
     text-decoration: underline;
 }
 
-.login-link a span i {
+.link a span i {
     animation: right .5s ease-in alternate infinite;
 }
 
@@ -379,7 +384,7 @@ nav ul li a:hover {
         opacity: 0;
     }
     nav ul li a {
-        font-size: 18px;
+        font-size: clamp(18px, 4vw, 50px);
     }
     .details i {
         opacity: 0;
@@ -441,16 +446,17 @@ nav ul li a:hover {
     }
     .hero-title {
         text-align: center;
-        font-size: 18px;
+        font-size: clamp(14px, 4vw, 50px);
         margin-bottom: clamp(25px, 2vw, 60px);
     }
     .hero-title span {
         font-weight: 900;
-        font-size: 45px;
+        font-size: clamp(45px, 10vw, 70px);
+
     }
     .sub {
         margin-bottom: clamp(30px, 2vw, 60px);
-        font-size: 14px;
+        font-size: clamp(14px, 2.3vw, 50px);
         text-align: center;
     }
     .hero-toggles {
@@ -461,7 +467,7 @@ nav ul li a:hover {
     .hero-toggles div {
         text-align: center;
         padding: 6px 20px;
-        font-size: 14px;
+        font-size: clamp(14px, 2vw, 50px);
     }
     .hero-img {
         flex-basis: 100%;
@@ -470,10 +476,16 @@ nav ul li a:hover {
         opacity: 0;
         animation: slideUp .5s ease forwards .4s;
     }
-    .login-link {
+    .links-container {
         text-align: center;
         opacity: 0;
         animation: slideUp .5s ease forwards .5s;
+        flex-direction: column;
+    }
+    .link a {
+        font-size: clamp(16px, 2.5vw, 50px);
+        font-weight: 500;
+        color: var(--maincolor);
     }
 }
 
@@ -1070,6 +1082,7 @@ form {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .login-img  {
     position: relative;
 }
@@ -1111,6 +1124,13 @@ form {
     text-align: center;
     opacity: 0;
     animation: slideUp .5s ease forwards .3s;
+}
+
+.login-main-link a {
+    color: var(--maincolor);
+}
+.login-main-link a i {
+    animation: right .5s ease-in alternate infinite;
 }
 
 .login:hover  {
@@ -1311,3 +1331,169 @@ button:hover {
         row-gap: 15px;
     }
 }
+
+
+
+/* CUSTOMERS: */
+.customer-hero {
+    display: block;
+    width: 65%;
+    padding-bottom: clamp(100px, 3vw, 150px);
+}
+
+.customer-title {
+    margin-bottom: clamp(25px, 2vw, 40px);
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    font-size: clamp(29px, 1.7vw, 70px);
+    opacity: 0;
+    animation: slideUp .5s ease forwards .3s;
+}
+.customer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: clamp(3px, .4vw, 15px);
+    background-color: var(--Green);
+    bottom: 0;
+}
+
+.customer-dashboard {
+    width: 100%;
+    margin-inline: auto;
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.2s;
+    opacity: 0;
+    animation: slideUp .5s ease forwards .4s;
+}
+
+.customer-track {
+    box-shadow: none;
+    border: clamp(1px, .2vw, 5px) solid rgb(172, 172, 172);
+    border-radius: 20px;
+    padding: clamp(20px, 1.5vw, 60px) clamp(25px, 1.5vw, 40px) clamp(15px, .7vw, 45px);
+    background-color: var(--white);
+}
+.customer-track:not(:last-child) {
+    margin-bottom: clamp(15px, 1vw, 40px);
+}
+
+.customer-name {
+    font-weight: 800;
+    font-size: clamp(23px, 1.5vw, 100px);
+}
+
+.customer-name-container {
+    align-items: center;
+}
+.customer-name-container p {
+    font-weight: 600;
+}
+
+.customer-name-container :is(.deactivated-user, .active-user) {
+    font-size: clamp(14px, 1vw, 30px);
+}
+
+.active-user {
+    color: var(--Green);
+}
+.deactivated-user {
+    color: var(--Red);
+}
+
+.view-profile {
+    color: var(--white);
+    background-color: var(--Green);
+    border-radius: 10px;
+    padding-block: clamp(10px, .5vw, 40px);
+}
+.view-profile:hover {
+    background-color: hsl(139, 35%, 60%);
+}
+.view-profile a {
+    color: var(--white);
+}
+
+.customer-time-track {
+    font-weight: 600;
+}
+
+.login-main-link2 {
+    padding-top: clamp(30px, 1vw, 60px);
+}
+
+
+/* CUSTOMER RESPONSIVENESS: */
+@media (max-width: 1000px) {
+    .customer-hero {
+        width: 90%;
+    }
+    .customer-track {
+        padding: clamp(20px, 1.5vw, 60px) clamp(15px, 1.5vw, 40px) clamp(15px, .7vw, 45px);
+    }
+    .title-container {
+        text-align: center;
+    }
+    .customer-name {
+        font-size: clamp(23px, 4vw, 100px);
+    }
+    .customer-name-container :is(.deactivated-user, .active-user) {
+        font-size: clamp(14px, 2vw, 30px);
+    }
+    .customer-time-track {
+        font-size: clamp(14px, 2.5vw, 30px);
+    }
+    .view-profile {
+        width: 80%;
+    }
+}
+
+
+
+/* !CUSTOMERS PROFILES: */
+.customer-title2 {
+    font-size: clamp(23px, 1.7vw, 70px);
+}
+.customer-title2::after {
+    width: 20%;
+}
+
+.profile-title2 {
+    line-height: 1.6;
+    font-size: clamp(35px, 2vw, 100px);
+}
+
+.user-form-div input {
+    background-color: rgb(216,216,216);
+}
+
+.deactivate-toggle-container {
+    width: 40%;
+    margin-top: clamp(40px, 1vw, 70px);
+}
+.deactivate-toggle-container :is(.deactivate-toggle) {
+    border: clamp(2px, .2vw, 4px) solid var(--Red);
+    color: var(--Red);
+    font-weight: 700;
+}
+
+.deactivate-toggle:hover {
+    color: var(--white);
+    background-color: var(--Red);
+}
+
+.customer-hero2 {
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.651);
+}
+
+
+/* !CUSTOMERS PROFILES RESPONSIVENESS: */
+@media (max-width: 590px) {
+    .deactivate-toggle-container {
+        width: 100%;
+    }
+}
+
