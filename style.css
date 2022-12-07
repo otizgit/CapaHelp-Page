@@ -336,7 +336,7 @@ nav ul li a:hover {
 }
 
 /* ? Intro Responsiveness: */
-@media (max-width: 1200px){
+@media screen and (max-width: 1200px){
     main {
         padding-bottom: 50px;
     }
@@ -581,7 +581,7 @@ nav ul li a:hover {
 }
 
 /* ! SOLUTIONS RESPONSIVENESS: */
-@media (max-width: 1000px){
+@media screen and (max-width: 1000px){
     .solutions-create {
         opacity: 0;
         position: absolute;
@@ -614,13 +614,13 @@ nav ul li a:hover {
     }
 }
 
-@media (min-width: 610px) and (max-width: 999px){
+@media screen and (min-width: 610px) and (max-width: 999px){
     .solution-hero-content div img{
         height: clamp(420px, 15vw, 1400px);
     }
 }
 
-@media (max-width: 420px){
+@media screen and (max-width: 420px){
     .solutions-create {
         padding: 5px;
         font-size: 12px;
@@ -774,7 +774,7 @@ nav ul li a:hover {
 
 
 /* * TICKET RESPONSIVENESS: */
-@media (max-width: 1000px){
+@media screen and (max-width: 1000px){
     .ticket-hero {
         width: 95%;
     }
@@ -931,7 +931,7 @@ form {
 }
 
 /* CREATE RESPONSIVENESS */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     form {
         width: 95%;
         margin-inline: auto;
@@ -1013,14 +1013,14 @@ form {
 
 
 /* !PROFILE RESPONSIVENESS: */
-@media (max-width: 1050px) and (min-width: 591px) {
+@media screen and (max-width: 1050px) and (min-width: 591px) {
     .profile-form {
         width: 85%;
     }
 }
 
 
-@media (max-width: 590px) {
+@media screen and (max-width: 590px) {
     .edit-div {
         justify-content: space-between;
         padding-inline: clamp(20px, 1vw, 20px);
@@ -1060,7 +1060,7 @@ form {
 
 /* ? CHANGE PASSWORD RESPONSIVENESS: */
 
-@media (max-width: 590px) {
+@media screen and (max-width: 590px) {
     .password-toggles {
         justify-content: space-between;
     }
@@ -1299,19 +1299,19 @@ button:hover {
 }
 
 /* * LOGIN RESPONSIVENESS: */
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .login-hero-toggle {
         justify-content: center;
     }
 }
 
-@media (max-width: 1300px) and (min-width: 769px) {
+@media screen and (max-width: 1300px) and (min-width: 769px) {
     .login-modal {
         width: 60%;
     }
 }
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .login-modal,
     .register-modal {
         width: 90%;
@@ -1427,7 +1427,7 @@ button:hover {
 
 
 /* CUSTOMER RESPONSIVENESS: */
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .customer-hero {
         width: 90%;
     }
@@ -1491,7 +1491,7 @@ button:hover {
 
 
 /* !CUSTOMERS PROFILES RESPONSIVENESS: */
-@media (max-width: 590px) {
+@media screen and (max-width: 590px) {
     .deactivate-toggle-container {
         width: 100%;
     }
