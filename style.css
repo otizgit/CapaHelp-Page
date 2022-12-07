@@ -310,6 +310,7 @@ nav ul li a:hover {
     opacity: 0;
     animation: slideUp .5s ease forwards .9s;
     margin-top: clamp(50px, 1vw, 100px);
+    padding-bottom: 60px;
 }
 
 .link a {
@@ -481,6 +482,7 @@ nav ul li a:hover {
         opacity: 0;
         animation: slideUp .5s ease forwards .5s;
         flex-direction: column;
+        padding-bottom: 30px;       
     }
     .link a {
         font-size: clamp(16px, 2.5vw, 50px);
