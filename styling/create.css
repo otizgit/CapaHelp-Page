@@ -1,0 +1,82 @@
+/* CREATE A TICKET: */
+form {
+    width: min(50%, 900px);
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.2s;
+}
+.create-title {
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1s;
+}
+.form-box {
+    margin-bottom: clamp(3px, .7vw, 20px);
+}
+.form-box > * {
+    display: block;
+}
+.form-box label {
+    font-weight: 600;
+    font-size: var(--clamp);
+    padding-left: clamp(5px, .7vw, 20px);
+    margin-bottom: clamp(2px, .3vw, 10px);  
+}
+.form-box label span {
+    color: red;
+}
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    outline: none;
+    border: clamp(1px, .2vw, 3px) solid rgb(99, 99, 99);
+    border-radius: 10px;
+    padding: clamp(5px, .7vw, 20px);
+    font-size: var(--clamp);
+    font-weight: 500;
+}
+.form-box select {
+    font-weight: 600;
+}
+
+.form-box textarea {
+    resize: none;
+}
+
+.file-label {
+    color: var(--maincolor);
+    cursor: pointer;
+}
+.file {
+    display: none;
+}
+.file-box {
+    display: flex;
+    gap: 5px;
+}
+.file-box p {
+    font-size: var(--clamp);
+}
+
+.create-toggles {
+    display: flex;
+    justify-content: right;
+}
+
+.create-main {
+    padding-bottom: 40px;
+}
+
+/* CREATE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    form {
+        width: 95%;
+        margin-inline: auto;
+        animation: slideUp .5s ease forwards .5s;
+    }
+    .form-box {
+        margin-bottom: 20px;
+    }
+    .create-title {
+        animation: slideUp .5s ease forwards .4s;
+    }
+}

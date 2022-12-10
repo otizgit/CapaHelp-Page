@@ -1,0 +1,120 @@
+/* CUSTOMERS: */
+.customer-hero {
+    display: block;
+    width: 65%;
+    padding-bottom: clamp(100px, 3vw, 150px);
+}
+
+.customer-title {
+    margin-bottom: clamp(25px, 2vw, 40px);
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    font-size: clamp(29px, 1.7vw, 70px);
+    opacity: 0;
+    animation: slideUp .5s ease forwards .3s;
+}
+.customer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: clamp(3px, .4vw, 15px);
+    background-color: var(--Green);
+    bottom: 0;
+}
+
+.customer-dashboard {
+    width: 100%;
+    margin-inline: auto;
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.2s;
+    opacity: 0;
+    animation: slideUp .5s ease forwards .4s;
+}
+
+.customer-track {
+    box-shadow: none;
+    border: clamp(1px, .2vw, 5px) solid rgb(172, 172, 172);
+    border-radius: 20px;
+    padding: clamp(20px, 1.5vw, 60px) clamp(25px, 1.5vw, 40px) clamp(15px, .7vw, 45px);
+    background-color: var(--white);
+}
+.customer-track:hover {
+    transform: translateY(-4px);
+}
+.customer-track:not(:last-child) {
+    margin-bottom: clamp(15px, 1vw, 40px);
+}
+
+.customer-name {
+    font-weight: 800;
+    font-size: clamp(23px, 1.5vw, 100px);
+}
+
+.customer-name-container {
+    align-items: center;
+}
+.customer-name-container p {
+    font-weight: 600;
+}
+
+.customer-name-container :is(.deactivated-user, .active-user) {
+    font-size: clamp(14px, 1vw, 30px);
+}
+
+.active-user {
+    color: var(--Green);
+}
+.deactivated-user {
+    color: var(--Red);
+}
+
+.view-profile {
+    color: var(--white);
+    background-color: var(--Green);
+    border-radius: 10px;
+    padding-block: clamp(10px, .5vw, 40px);
+}
+.view-profile:hover {
+    background-color: hsl(139, 35%, 60%);
+}
+.view-profile a {
+    color: var(--white);
+}
+
+.customer-time-track {
+    font-weight: 600;
+}
+
+.login-main-link2 {
+    padding-top: clamp(30px, 1vw, 60px);
+}
+
+
+/* CUSTOMER RESPONSIVENESS: */
+@media screen and (max-width: 1000px) {
+    .customer-hero {
+        width: 90%;
+    }
+    .customer-track {
+        padding: clamp(20px, 1.5vw, 60px) clamp(15px, 1.5vw, 40px) clamp(15px, .7vw, 45px);
+    }
+    .title-container {
+        text-align: center;
+    }
+    .customer-name {
+        font-size: clamp(23px, 4vw, 100px);
+    }
+    .customer-name-container :is(.deactivated-user, .active-user) {
+        font-size: clamp(14px, 2vw, 30px);
+    }
+    .customer-time-track {
+        font-size: clamp(14px, 2.5vw, 30px);
+    }
+    .view-profile {
+        width: 80%;
+    }
+}
+

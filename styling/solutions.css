@@ -1,0 +1,143 @@
+/* SOLUTIONS: */
+.solutions-hero-toggle div {
+    padding: 5px;
+    opacity: 0;
+    animation: slideUp .5s ease forwards .5s;
+}
+.solution-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.solutions-create a {
+    color: var(--white);
+}
+.solutions-create:hover a {
+    color: var(--maincolor);
+}
+.solution-header {
+    margin-bottom: clamp(50px, 4vw, 250px);
+}
+.solution-hero {
+    display: block;
+    padding-bottom: 60px;
+}
+.solutions-top {
+    opacity: 0;
+    animation: slideUp .5s ease forwards .9s;
+}
+.solutions-top a {
+    font-weight: 500;
+    font-size: var(--clamp);
+    color: black;
+}
+.solutions-top span a {
+    color: var(--maincolor);
+}
+.solutions-head {
+    text-align: center;
+    margin-bottom: clamp(30px, 2vw, 60px);
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1s;
+}
+.solutions-head h1 {
+    font-size: clamp(20px, 2vw, 50px);
+    font-weight: 900;
+}
+.solutions-head h1 span {
+    color: var(--maincolor);
+}
+.solution-hero-content {
+    width: 85%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(30px, 2vw, 100px);
+}
+.solution-hero-content div {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.24);
+    padding-top: clamp(10px, 1vw, 40px);
+    cursor: pointer;
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.1s;
+}
+.solution-hero-content div:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.24);
+    transform: translateY(-7px);
+}
+.solution-hero-content div img{
+    width: 100%;
+    height: clamp(220px, 15vw, 1400px);
+    display: block;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.solution-hero-content div h1 {
+    text-align: center;
+    padding-bottom: clamp(20px, 1vw, 40px);
+    font-size: clamp(20px, 1.5vw, 50px);
+}
+.plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus i {
+    font-size: clamp(100px, 7vw, 250px);
+    color: var(--maincolor);
+}
+
+/* ! SOLUTIONS RESPONSIVENESS: */
+@media screen and (max-width: 1000px){
+    .solutions-create {
+        opacity: 0;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200%;
+    }
+    .solution-nav {
+        padding-top: 190px;
+    }
+    .solutions-top {
+        text-align: center;
+        margin-bottom: 20px;
+        animation: slideUp .5s ease forwards .3s;
+    }
+    .solutions-head {
+        animation: slideUp .5s ease forwards .4s;
+    }
+    .solution-hero-content {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: clamp(30px, 2vw, 100px);
+    }
+    .solution-hero-content div {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .5s;
+    }
+    .plus {
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 610px) and (max-width: 999px){
+    .solution-hero-content div img{
+        height: clamp(420px, 15vw, 1400px);
+    }
+}
+
+@media screen and (max-width: 420px){
+    .solutions-create {
+        padding: 5px;
+        font-size: 12px;
+        opacity: 0;
+    }
+    .solution-deets {
+        gap: 10px;
+    }
+    .plus i {
+        color: var(--maincolor);
+    }
+}
