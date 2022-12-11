@@ -128,9 +128,6 @@ nav ul li a:hover {
     opacity: 0;
     animation: slideUp .5s ease forwards .6s;
 }
-.details i:hover {
-    color: var(--linkscolor);
-}
 
 .user {
     cursor: pointer;
@@ -313,7 +310,7 @@ nav ul li a:hover {
     gap: clamp(25px, 2vw, 50px);
     opacity: 0;
     animation: slideUp .5s ease forwards .9s;
-    margin-top: clamp(50px, 1vw, 100px);
+    margin-top: clamp(50px, 4vw, 200px);
     padding-bottom: 60px;
 }
 
@@ -339,6 +336,98 @@ nav ul li a:hover {
         transform: translateX(4px);
     }
 }
+
+.notifications {
+    position: absolute;
+    right: 5%;
+    left: 65%;
+    background-color: var(--white);
+    z-index: 10;
+    padding: clamp(10px, 1vw, 50px);
+    border: clamp(2px, .2vw, 10px) solid transparent;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: clamp(2px, .2vw, 10px) solid rgb(202, 202, 202);
+    overflow: auto;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .2s;
+}
+
+.notification-container {
+    opacity: 0;
+    transition: .1s;
+}
+
+.notifications-top-layer {
+    border-bottom: clamp(1px, .2vw, 10px) solid rgb(202, 202, 202);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.notifications-top-layer h3 {
+    font-size: clamp(20px, 1vw, 30px);
+    color: var(--maincolor);
+}
+
+.close {
+    font-size: clamp(16px, 1.8vw, 160px);
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-block;
+    transition: none;
+}
+.close:hover {
+    color: red;
+}
+
+.mark {
+    display: flex;
+    justify-content: right;
+    font-size: var(--clamp);
+    padding-top: clamp(5px, .3vw, 20px);
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: clamp(10px, 1vw, 30px);
+}
+.mark:hover {
+    text-decoration: underline;
+}
+
+.notification-box {
+    background-color: hsl(0, 0%, 90%);
+    padding: clamp(20px, 1vw, 60px) clamp(10px, .3vw, 20px);
+    font-weight: 500;
+    font-size: var(--clamp);
+    border: clamp(1px, .2vw, 10px) solid rgb(202, 202, 202);
+    cursor: pointer;
+    border-radius: 7px;
+    font-style: oblique;
+    transition: .1;
+}
+.notification-box:hover {
+    border: clamp(1px, .2vw, 10px) solid var(--maincolor);
+}
+
+.show-notification {
+    transform: scaleY(1);
+    transition: .3s;
+}
+
+.notification-delay {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.read {
+    background-color: var(--white);
+    cursor: pointer;
+    border-radius: 7px;
+}
+.read:hover {
+    border: clamp(1px, .2vw, 10px) solid rgb(202, 202, 202);
+}
+
 
 /* ? Intro Responsiveness: */
 @media screen and (max-width: 1200px){
@@ -385,16 +474,16 @@ nav ul li a:hover {
         align-items: center;
         gap: clamp(50px, 3vw, 100px);
     }
-    nav ul li {
+    nav ul li a{
         opacity: 0;
     }
     nav ul li a {
         font-size: clamp(18px, 4vw, 50px);
     }
-    .details i {
+    .user {
         opacity: 0;
     }
-    .user {
+    .bell {
         opacity: 0;
     }
     @keyframes show {
@@ -433,7 +522,6 @@ nav ul li a:hover {
         gap: 10px;
         margin-bottom: 20px;
     }
-    
     .username-info {
         font-size: 13px;
         font-weight: 600;
@@ -457,7 +545,6 @@ nav ul li a:hover {
     .hero-title span {
         font-weight: 900;
         font-size: clamp(45px, 10vw, 70px);
-
     }
     .sub {
         margin-bottom: clamp(30px, 2vw, 60px);
@@ -493,13 +580,39 @@ nav ul li a:hover {
         font-weight: 500;
         color: var(--maincolor);
     }
+    .notifications {
+        right: 0%;
+        left: 0%;
+        padding: clamp(20px, 2vw, 50px);
+    }
+    .notifications-top-layer {
+        border-bottom: clamp(2px, .2vw, 10px) solid rgb(202, 202, 202);
+    }
+    .notifications-top-layer h3 {
+        font-size: clamp(30px, 3vw, 60px);
+    }
+    .close {
+        font-size: clamp(30px, 1.5vw, 60px);
+    }
+    .mark {
+        font-size: clamp(18px, 1vw, 40px);
+        padding-top: clamp(18px, 3vw, 40px);
+        margin-bottom: clamp(10px, 3vw, 40px);
+    }    
+    .notification-box {
+        padding: clamp(25px, 3vw, 60px) clamp(10px, 1.4vw, 20px);
+        font-weight: 500;
+        font-size: clamp(17px, 2vw, 60px);
+    }   
 }
+
 
 
 /* ? TICKETS: */
 .ticket-main {
     background-color: var(--ticketBackground);
     min-height: 100vh;
+    padding-bottom: clamp(60px, 1vw, 120px);
 }
 
 .ticket-top {
@@ -565,6 +678,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 .track:hover {
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.24);
@@ -719,4 +833,171 @@ nav ul li a:hover {
         top: 15px;
         right: 10px;
     }
+}
+
+
+
+/* !PENDING TICKET: */
+:root {
+    --margin1: clamp(10px, 1vw, 30px);
+    --margin2: clamp(15px, 1vw, 30px);
+    --margin3: clamp(20px, 1vw, 40px);
+    --pending-backdrop: rgb(233,254,230);
+    --clamp2: clamp(13px, 1vw, 25px);
+}
+
+.pending-hero {
+    padding-inline: clamp(25px, 1vw, 60px);
+    width: 70%;
+    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.356);
+}
+.pending-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pending-info {
+    border-bottom: clamp(2px, .2vw, 5px) solid rgb(184, 184, 184);
+    margin-bottom: var(--margin2);
+}
+
+.resolve {
+    border-radius: 10px;
+    font-size: var(--clamp);
+}
+.resolve:hover {
+    background-color: var(--white);
+    color: var(--maincolor);
+}
+
+.pending-name h2 {
+    font-size: clamp(23px, 1.5vw, 60px);
+    margin-bottom: clamp(7px, .5vw, 30px);
+}
+
+.subject {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--margin1);
+}
+.subject-p {
+    font-weight: 600;
+    font-size: clamp(16px, 1vw, 30px);
+}
+.subject-p2 {
+    font-size: clamp(13px, 1vw, 30px);
+    font-weight: 500;
+}
+
+.pending-div {
+    font-weight: 600;
+    background-color: var(--yellow);
+    display: inline-block;
+    font-size: clamp(13px, .7vw, 30px);
+    padding-inline: clamp(5px, .5vw, 10px);
+    border-radius: 7px;
+    margin-bottom: var(--margin1);
+}
+
+.pending-container {
+    background-color: var(--pending-backdrop);
+    border-radius: 7px;
+    padding: clamp(10px, 1vw, 30px);
+    padding-bottom: clamp(40px, 1vw, 80px);
+}
+.pending-container:not(:last-child) {
+    margin-bottom: var(--margin3);
+}
+
+.pending-flex {
+    display: flex;
+    gap: clamp(25px, 1vw, 50px);
+}
+
+.pending-user {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 1vw, 50px);
+    margin-bottom: var(--margin1);
+}
+
+.pending-user h2 {
+    font-size: clamp(17px, 1vw, 30px);
+}
+
+.pending-user p {
+    font-size: clamp(14px, 1vw, 25px);
+    font-weight: 500;
+}
+
+.top-word {
+    margin-bottom: var(--margin3);
+    font-size: var(--clamp2);
+}
+
+.attachment-header {
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    font-size: var(--clamp);
+    margin-bottom: var(--margin1);
+}
+
+.attachment-div {
+    width: 80%;
+    border-radius: 4px;
+    border: clamp(1px, .1vw, 5px) solid rgb(83, 83, 83);
+    background-color: rgb(250, 250, 250);
+    padding: clamp(10px, 1vw, 30px);
+    cursor: pointer;
+}
+
+.attachment-div-header {
+    font-weight: 700;
+    font-size: var(--clamp);
+    margin-bottom: clamp(5px, .5vw, 10px);
+}
+
+.attachment-size {
+    font-size: var(--clamp2);
+}
+
+.pending-container-info2 {
+    flex: 1;
+    padding-right: clamp(20px, 1vw, 40px);
+}
+
+.pending-main-content textarea {
+    resize: none;
+    display: block;
+    border-radius: 7px;
+    width: 100%;
+    margin-bottom: var(--margin1);
+    font-size: var(--clamp);
+    padding: clamp(10px, 1vw, 30px);
+    outline: none;
+}
+
+.pending-user2 {
+    margin-bottom: 0;
+}
+
+.pending-submit {
+    display: flex;
+    justify-content: right;
+}
+.pending-submit-btn {
+    background-color: var(--maincolor);
+    display: inline-block;
+    color: var(--white);
+    padding: clamp(5px, .5vw, 20px) clamp(10px, 1vw, 20px);
+    font-size: var(--clamp);
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.pending-submit-btn:hover {
+    color: var(--maincolor);
+    background-color: var(--white);
+    border: 2px solid var(--maincolor);
 }

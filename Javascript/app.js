@@ -3,8 +3,14 @@ const user = document.querySelector(".user");
 const userDetails = document.querySelector(".user-details");
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector("nav");
-const links = document.querySelectorAll("nav ul li");
-const bell = document.querySelector(".fa-bell");
+const links = document.querySelectorAll("nav ul li a");
+const bell = document.querySelector(".bell");
+const header = document.querySelector("header");
+const notifications = document.querySelector(".notifications");
+const close = document.querySelector(".close");
+const mark = document.querySelector(".mark");
+const notificationBox = document.querySelector(".notification-box");
+const notificationContainer = document.querySelector(".notification-container");
 
 hamburger.addEventListener("click", function () {
   nav.classList.toggle("display-nav");
@@ -18,4 +24,20 @@ hamburger.addEventListener("click", function () {
 
 user.addEventListener("click", function () {
   userDetails.classList.toggle("load");
+});
+
+notifications.style.top = header.getBoundingClientRect().height + "px";
+
+bell.addEventListener("click", function () {
+  notifications.classList.toggle("show-notification");
+  notificationContainer.classList.toggle("notification-delay");
+});
+
+close.addEventListener("click", function () {
+  notifications.classList.remove("show-notification");
+  notificationContainer.classList.remove("notification-delay");
+});
+
+mark.addEventListener("click", function () {
+  notificationBox.classList.add('read')
 });

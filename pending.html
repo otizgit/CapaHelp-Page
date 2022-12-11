@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapaHelp- Tickets</title>
+    <link rel="icon" sizes="32x32" type="jpg/png" href="./images/CapacityBay-Logo1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styling/solutions.css">
+    <link rel="stylesheet" href="./styling/create.css">
+    <link rel="stylesheet" href="./styling/pending.css">
+    <link rel="stylesheet" href="./styling/login.css">
+    <script defer src="https://kit.fontawesome.com/96a70be8ea.js" crossorigin="anonymous"></script>
+    <script defer src="./Javascript/app.js"></script>
+    <script defer src="./Javascript/ticket.js"></script>
+</head>
+<body>
+    <main class="ticket-main login-main">
+        <header class="solution-header">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./images/CapacityBay-Logo1.png" alt="CapacityBay-Logo1">
+                </a>
+            </div>
+            <nav>
+                <div class="main-navigation">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./solutions.html">Solutions</a></li>
+                        <li><a class="active-nav" href="./tickets.html">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <div class="bell"><i class="fa-regular fa-bell"></i></div>
+                    <div class="user">
+                        <p class="clickable-user">EO</p>
+                        <div class="user-details">
+                            <div class="username">
+                                <p class="clickable-user clickable2">EO</p>
+                                <div class="username-info">Emmanuel Onyenegbutu</div>
+                            </div>
+                            <div class="username-info info1">
+                                <a href="./profile.html">Edit Profile</a>
+                            </div>
+                            <div class="username-info info2"><a href="./index.html">Logout</a></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hamburger">
+                <div class="ham"></div>
+                <div class="ham"></div>
+                <div class="ham"></div>
+            </div>
+        </header>
+        <div class="notifications">
+            <div class="notification-container">
+                <div class="notifications-top-layer">
+                    <h3>Notifications</h3>
+                    <div class="close">&#10005;</div>
+                </div>
+                <div class="mark">Mark all as read</div>
+                <div class="notification-box">
+                    <p>You are yet to confirm your email address...</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero solution-hero ticket-hero pending-hero">
+            <div class="solutions-top ticket-top pending-top">
+                <div>
+                    <span><a href="./tickets.html">Tickets</a></span> > <a href="./pending.html">
+                        #CAPA-3
+                    </a>
+                </div>
+                <div class="pending-toggle">
+                    <div class="active-ticket active resolve">Resolve</div>
+                </div>
+            </div>
+            <div class="pending-info">
+                <div class="pending-name">
+                    <h2>Emmanuel Onyenegbutu</h2>
+                    <div class="subject">
+                        <p class="subject-p">Subject, I want to Create a Website</p>
+                        <p class="subject-p2">Created on Wednesday, 28 Sep 2022 9:05 PM</p>
+                    </div>
+                    <div class="pending-div">Status- Pending</div>
+                </div>
+            </div>
+            <div class="pending-content">
+                <div class="pending-container">
+                    <div class="pending-flex">
+                        <p class="clickable-user">EO</p>
+                        <div class="pending-container-info">
+                            <div class="pending-user">
+                                <h2>Emmanuel Onyenegbutu</h2>
+                                <p>Posted 1 day ago</p>
+                            </div>
+                            <div class="pending-main-content">
+                                <p class="top-word">Hello, CapaHelp Team,</p>
+                                <p class="top-word">I want to Create a Website for my Tea Business namely "Mai Tea Herbals"</p>
+                                <div class="attachment">
+                                    <p class="attachment-header">1 Attachment(Scanned for viruses)</p>
+                                    <div class="attachment-div">
+                                        <p class="attachment-div-header">Mai Tea Herbals Document.docx</p>
+                                        <p class="attachment-size">(368.67KB)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pending-container">
+                    <div class="pending-flex">
+                        <p class="clickable-user">AM</p>
+                        <div class="pending-container-info pending-container-info2">
+                            <div class="pending-user pending-user2">
+                                <h2>Reply</h2>
+                            </div>
+                            <div class="pending-main-content pending-main-content2">
+                                <textarea id="comment2" rows="10"></textarea>
+                            </div>
+                            <div class="form-box file-box">
+                                <label class="file-label" for="file">Attach a file</label>
+                                <p>(File size < 35mb)</p>
+                                <input type="file" id="file" class="file">
+                            </div>
+                            <div class="pending-submit">
+                                <div class="pending-submit-btn">
+                                    Submit
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </main>
+</body>
+</html>
