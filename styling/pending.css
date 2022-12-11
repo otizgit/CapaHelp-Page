@@ -1,0 +1,254 @@
+/* !PENDING TICKET: */
+.pending-hero {
+    padding-inline: clamp(25px, 1vw, 60px);
+    width: 70%;
+    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.356);
+}
+
+.pending-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pending-info {
+    border-bottom: clamp(2px, .2vw, 5px) solid rgb(184, 184, 184);
+    margin-bottom: var(--margin2);
+}
+
+.resolve {
+    border-radius: 10px;
+    font-size: var(--clamp);
+}
+.resolve:hover {
+    background-color: var(--white);
+    color: var(--maincolor);
+}
+
+.pending-name h2 {
+    font-size: clamp(23px, 1.5vw, 60px);
+    margin-bottom: clamp(7px, .5vw, 30px);
+    opacity: 0;
+    animation: slideUp .5s ease forwards .9s;
+}
+
+.subject {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--margin1);
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1s;
+}
+.subject-p {
+    font-weight: 600;
+    font-size: clamp(16px, 1vw, 30px);
+}
+.subject-p2 {
+    font-size: clamp(13px, 1vw, 30px);
+    font-weight: 500;
+}
+
+.pending-div {
+    font-weight: 600;
+    background-color: var(--yellow);
+    display: inline-block;
+    font-size: clamp(13px, .7vw, 30px);
+    padding-inline: clamp(5px, .5vw, 10px);
+    border-radius: 7px;
+    margin-bottom: var(--margin1);
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.03s;
+}
+
+.pending-container {
+    background-color: var(--pending-backdrop);
+    border-radius: 7px;
+    padding: clamp(10px, 1vw, 30px);
+    padding-bottom: clamp(40px, 1vw, 80px);
+}
+.pending-container:nth-child(1) {
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.1s;
+}
+.pending-container:nth-child(2) {
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.2s;
+}
+.pending-container:not(:last-child) {
+    margin-bottom: var(--margin3);
+}
+
+.pending-flex {
+    display: flex;
+    gap: clamp(25px, 1vw, 50px);
+}
+
+.pending-user {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 1vw, 50px);
+    margin-bottom: var(--margin1);
+}
+
+.pending-user h2 {
+    font-size: clamp(17px, 1vw, 30px);
+}
+
+.pending-user p {
+    font-size: clamp(14px, 1vw, 25px);
+    font-weight: 500;
+}
+
+.top-word {
+    margin-bottom: var(--margin3);
+    font-size: var(--clamp2);
+}
+
+.attachment-header {
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    font-size: var(--clamp);
+    margin-bottom: var(--margin1);
+}
+
+.attachment-div {
+    width: 80%;
+    border-radius: 4px;
+    border: clamp(1px, .1vw, 5px) solid rgb(83, 83, 83);
+    background-color: rgb(250, 250, 250);
+    padding: clamp(10px, 1vw, 30px);
+    cursor: pointer;
+}
+
+.attachment-div-header {
+    font-weight: 700;
+    font-size: var(--clamp);
+    margin-bottom: clamp(5px, .5vw, 10px);
+}
+
+.attachment-size {
+    font-size: var(--clamp2);
+}
+
+.pending-container-info2 {
+    flex: 1;
+    padding-right: clamp(20px, 1vw, 40px);
+}
+
+.pending-main-content textarea {
+    resize: none;
+    display: block;
+    border-radius: 7px;
+    width: 100%;
+    margin-bottom: var(--margin1);
+    font-size: var(--clamp);
+    padding: clamp(10px, 1vw, 30px);
+    outline: none;
+}
+
+.pending-user2 {
+    margin-bottom: 0;
+}
+
+.pending-submit {
+    display: flex;
+    justify-content: right;
+}
+.pending-submit-btn {
+    background-color: var(--maincolor);
+    display: inline-block;
+    color: var(--white);
+    padding: clamp(5px, .5vw, 20px) clamp(10px, 1vw, 20px);
+    font-size: var(--clamp);
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0;
+    animation: slideUp .5s ease forwards 1.25s;
+}
+.pending-submit-btn:hover {
+    color: var(--maincolor);
+    background-color: var(--white);
+    border: 2px solid var(--maincolor);
+}
+
+
+/* !PENDIG TICKET RESPONSIVENESS: */
+@media screen and (max-width: 950px) {
+    .resolve {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .3s;
+    }
+    .pending-name h2 {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .4s;
+    }
+    .subject {
+        flex-direction: column;
+        gap: var(--margin1);
+        opacity: 0;
+        animation: slideUp .5s ease forwards .44s;
+    }
+    .pending-div {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .5s;
+    }
+    .pending-container:nth-child(1) {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .5s;
+    }
+    .pending-container:nth-child(2) {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .6s;
+    }
+    .pending-submit-btn {
+        opacity: 0;
+        animation: slideUp .5s ease forwards .65s;
+    }
+    .pending-file-box {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pending-hero {
+        width: 95%;
+    }
+    .pending-flex {
+        flex-direction: column;
+    }
+    .pending-container-info {
+        flex: 1;
+    }
+    .attachment-div {
+        width: 100%;
+    }
+    .pending-container-info2 {
+        flex: 1;
+        padding-right: 0;
+    }
+    .pending-submit {
+        justify-content: center;
+    }
+    .pending-submit-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 770px) {
+    .pending-hero {
+        width: 80%;
+    }
+    .pending-user {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .pending-hero {
+        padding-inline: 10px;
+    }
+}

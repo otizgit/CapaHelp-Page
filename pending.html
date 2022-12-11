@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CapaHelp- Tickets</title>
+    <title>CapaHelp- Pending Ticket</title>
     <link rel="icon" sizes="32x32" type="jpg/png" href="./images/CapacityBay-Logo1.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./styling/solutions.css">
+    <link rel="stylesheet" href="./styling/tickets.css">
     <link rel="stylesheet" href="./styling/create.css">
-    <link rel="stylesheet" href="./styling/pending.css">
     <link rel="stylesheet" href="./styling/login.css">
+    <link rel="stylesheet" href="./styling/pending.css">
     <script defer src="https://kit.fontawesome.com/96a70be8ea.js" crossorigin="anonymous"></script>
     <script defer src="./Javascript/app.js"></script>
     <script defer src="./Javascript/ticket.js"></script>
@@ -63,6 +64,9 @@
                 <div class="mark">Mark all as read</div>
                 <div class="notification-box">
                     <p>You are yet to confirm your email address...</p>
+                </div>
+                <div class="notification-box">
+                    <p>Emmanuel Onyenegbutu replied to ticket...</p>
                 </div>
             </div>
         </div>
@@ -120,7 +124,7 @@
                             <div class="pending-main-content pending-main-content2">
                                 <textarea id="comment2" rows="10"></textarea>
                             </div>
-                            <div class="form-box file-box">
+                            <div class="form-box file-box pending-file-box">
                                 <label class="file-label" for="file">Attach a file</label>
                                 <p>(File size < 35mb)</p>
                                 <input type="file" id="file" class="file">

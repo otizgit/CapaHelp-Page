@@ -9,7 +9,7 @@ const header = document.querySelector("header");
 const notifications = document.querySelector(".notifications");
 const close = document.querySelector(".close");
 const mark = document.querySelector(".mark");
-const notificationBox = document.querySelector(".notification-box");
+const notificationBoxes = document.querySelectorAll(".notification-box");
 const notificationContainer = document.querySelector(".notification-container");
 
 hamburger.addEventListener("click", function () {
@@ -39,5 +39,7 @@ close.addEventListener("click", function () {
 });
 
 mark.addEventListener("click", function () {
+  notificationBoxes.forEach(function(notificationBox) {
   notificationBox.classList.add('read')
+  })
 });
