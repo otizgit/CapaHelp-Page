@@ -1,15 +1,27 @@
 // ? LOGIN JS:
 const logHamburger = document.querySelector(".log-ham");
-const nav = document.querySelector("nav");
+const logNav = document.querySelector(".log-nav");
 const loginBtn = document.querySelector(".login");
 const registerBtn = document.querySelector(".register");
 const registerModal = document.querySelector(".register-modal")
 const loginModal = document.querySelector(".login-modal");
 const overlay = document.querySelector(".overlay");
+const logX = document.querySelector('.log-x')
 
 logHamburger.addEventListener("click", function () {
-  nav.classList.toggle("display-nav");
-  logHamburger.classList.toggle("active-ham");
+  logNav.classList.add("display-nav");
+  logHamburger.classList.add("active-ham");
+  loginBtn.classList.add('display-links')
+  registerBtn.classList.add('display-links')
+  logX.classList.add("display-links");
+});
+
+logX.addEventListener("click", function () {
+  logNav.classList.remove("display-nav");
+  logHamburger.classList.remove("active-ham");
+  loginBtn.classList.remove('display-links')
+  registerBtn.classList.remove('display-links')
+  logX.classList.remove("display-links");
 });
 
 loginBtn.addEventListener("click", function () {

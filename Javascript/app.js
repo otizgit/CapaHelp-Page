@@ -11,15 +11,30 @@ const close = document.querySelector(".close");
 const mark = document.querySelector(".mark");
 const notificationBoxes = document.querySelectorAll(".notification-box");
 const notificationContainer = document.querySelector(".notification-container");
+const xMark = document.querySelector(".x-mark");
 
 hamburger.addEventListener("click", function () {
-  nav.classList.toggle("display-nav");
-  bell.classList.toggle("display-links");
+  nav.classList.add("display-nav");
+  bell.classList.add("display-links");
   links.forEach(function (link) {
-    link.classList.toggle("display-links");
+    link.classList.add("display-links");
   });
-  user.classList.toggle("display-links");
-  hamburger.classList.toggle("active-ham");
+
+  user.classList.add("display-links");
+  hamburger.classList.add("active-ham");
+  xMark.classList.add("display-links");
+});
+
+xMark.addEventListener("click", function () {
+  nav.classList.remove("display-nav");
+  bell.classList.remove("display-links");
+  links.forEach(function (link) {
+    link.classList.remove("display-links");
+  });
+
+  user.classList.remove("display-links");
+  hamburger.classList.remove("active-ham");
+  xMark.classList.remove("display-links");
 });
 
 user.addEventListener("click", function () {
@@ -39,7 +54,7 @@ close.addEventListener("click", function () {
 });
 
 mark.addEventListener("click", function () {
-  notificationBoxes.forEach(function(notificationBox) {
-  notificationBox.classList.add('read')
-  })
+  notificationBoxes.forEach(function (notificationBox) {
+    notificationBox.classList.add("read");
+  });
 });

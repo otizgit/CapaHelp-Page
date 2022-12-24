@@ -280,6 +280,10 @@ header {
     border: clamp(1px, .2vw, 10px) solid rgb(202, 202, 202);
 }
 
+.x-mark {
+    display: none;
+}
+
 
 /* ? Intro Responsiveness: */
 @media screen and (max-width: 1200px){
@@ -291,7 +295,7 @@ header {
         margin-bottom: 50px;
     }   
     .logo a img {
-        width: 40px;
+        width: 60px;
     }
     .hero {
         padding: 0px;
