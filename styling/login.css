@@ -228,10 +228,6 @@ button:hover {
     pointer-events: all;
 }
 
-.log-x {
-    display: block;
-}
-
 /* * LOGIN RESPONSIVENESS: */
 @media screen and (max-width: 1200px) {
     .login-hero-toggle {
