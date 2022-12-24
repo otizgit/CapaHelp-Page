@@ -228,10 +228,17 @@ button:hover {
     pointer-events: all;
 }
 
+.log-x {
+    display: none;
+}
+
 /* * LOGIN RESPONSIVENESS: */
 @media screen and (max-width: 1200px) {
     .login-hero-toggle {
         justify-content: center;
+    }
+    .log-x {
+        display: block;
     }
 }
 
